@@ -43,7 +43,7 @@
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3">
+            <!-- <li class="mr-3">
               <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
             </li>
             <li class="mr-3">
@@ -51,13 +51,14 @@
             </li>
             <li class="mr-3">
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
-            </li>
+            </li> -->
           </ul>
           <button
+            onclick="openModal()"
             id="navAction"
             class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
-            Action
+            Contact Us
           </button>
         </div>
       </div>
@@ -75,7 +76,7 @@
           <p class="w-full leading-normal text-2xl mb-8 text-center md:text-left">
             Where your dog feels at home
           </p>
-          <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+          <button onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             Contact Us
           </button>
         </div>
@@ -366,7 +367,7 @@
       <h3 class="my-4 text-3xl leading-tight">
         Don't hesitate, give your dog the care they deserve!
       </h3>
-      <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+      <button onclick="openModal()" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Contact Us
       </button>
     </section>
@@ -374,26 +375,25 @@
     <footer class="bg-white">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
-          <div class="flex-1 text-black">
-            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
-            <img src="img/doggy.svg" alt="dog" class="h-8 fill-current inline" />
-              DOGGYLAND
-            </a>
-          </div>
-          <div class="flex-1 text-gray-800 flex-1 flex items-center">
-            <div class="flex md:flex-1 justify-end">
+          <div class="flex-1 text-gray-800 flex-1 flex items-center md:mb-0 mb-4 justify-start">
+            <div class="flex md:flex-1">
                 <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500 flex items-center">
-                    <img class="h-6 mask" src="img/instagram.svg" alt="instagram"/>
+                    <img class="h-7 mask" src="img/instagram.svg" alt="instagram"/>
                 </a>
-                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500 ml-4">
+                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-pink-500 ml-2 items-center flex">
                     <img class="h-6 mask" src="img/facebook.svg" alt="facebook"/>
                 </a>
-                <!-- ec4899 -->
-                <div class="text-gray-600 hover:text-pink-500 ml-4 flex">
+                <div class="text-gray-600 hover:text-pink-500 ml-2 flex items-center">
                     <div>+34 123 456 789</div>
                 </div>
             </div>
-            <!-- <div class="text-gray-400">Doggyland &copy; 2024</div> -->
+          </div>
+          <div class="text-gray-400">
+            Doggyland &copy; 2024
+            <!-- <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+            <img src="img/doggy.svg" alt="dog" class="h-8 fill-current inline" />
+              DOGGYLAND
+            </a> -->
           </div>
           <!-- <div class="flex-1">
             <p class="uppercase text-gray-500 md:mb-6">Links</p>
@@ -452,6 +452,38 @@
       </div>
       <!-- <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector created by freepik - www.freepik.com</a> -->
     </footer>
+     <!-- Modal -->
+     <div id="myModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div class="sm:flex sm:items-start">
+                    <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-pink-100 sm:mx-0 sm:h-10 sm:w-10">
+                        <!-- Icon -->
+                        <svg class="h-6 w-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                            Our Contacts
+                        </h3>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-500">
+                                Contact information: <br>
+                                <strong>Phone:</strong> +34 123 456 789 <br>
+                                <strong>Email:</strong> test@test.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button onclick="closeModal()" id="closeModal" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-pink-600 text-base font-medium text-white hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 sm:ml-3 sm:w-auto sm:text-sm">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   -->
@@ -534,6 +566,12 @@
           t = t.parentNode;
         }
         return false;
+      }
+      function openModal() {
+        document.getElementById("myModal").classList.remove("hidden");
+      }
+      function closeModal() {
+        document.getElementById("myModal").classList.add("hidden");
       }
     </script>
   </body>
