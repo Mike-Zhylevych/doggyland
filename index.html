@@ -45,14 +45,18 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <!-- <li class="mr-3">
               <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
-            </li>
-            <li class="mr-3">
+            </li>  -->
+            <!-- <li class="mr-3">
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li>
             <li class="mr-3">
               <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
             </li> -->
           </ul>
+          <select class="mr-3 text-sm rounded-lg p-2.5 bg-transparent text-white" id="languageSwitcher">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+          </select>
           <button
             onclick="openModal()"
             id="navAction"
@@ -178,7 +182,7 @@
           </div>
       </div>
     </section>
-    <!-- <section class="bg-white border-b py-8">
+    <section class="bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Title
@@ -334,7 +338,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- Change the colour #fff to match the previous section colour -->
     <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -573,6 +577,22 @@
       function closeModal() {
         document.getElementById("myModal").classList.add("hidden");
       }
+      function handleLanguageChange(event) {
+            const selectedLanguage = event.target.value;
+            loadTranslations(selectedLanguage);
+      
+      }
+      // Add event listener to the language switcher
+      document.getElementById('languageSwitcher').addEventListener('change', handleLanguageChange);
+      async function loadTranslations(selectedLanguage) {
+            try {
+                const response = await fetch(`translations/${selectedLanguage}.json`);
+                const translations = await response.json();
+                console.log('translations', translations);
+            } catch (error) {
+                console.error('Error loading translations:', error);
+            }
+        }
     </script>
   </body>
 </html>
