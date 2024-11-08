@@ -66,8 +66,8 @@
             </li> -->
           </ul>
           <select class="mr-3 text-sm rounded-lg p-2.5 bg-transparent text-white font-bold text-lg" id="languageSwitcher">
-            <option value="en">EN</option>
             <option value="es">ES</option>
+            <option value="en">EN</option>
           </select>
           <button
             onclick="openModal()"
@@ -173,6 +173,16 @@
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
         <div id="section4Description" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+      </div>
+    </section>
+    <section class="bg-gray-100 py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h2 id="aboutUsHeading" class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"></h2>
+        <div class="w-full">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+        <div id="aboutUsSection1" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
+        <div id="aboutUsSection2" class="text-gray-800 text-center p-6 text-xl mb-2"></div>
       </div>
     </section>
     <!-- <section class="bg-white border-b py-8">
@@ -594,7 +604,10 @@
                 section4Heading: "Every bark is welcome",
                 section4Description: "We know your comfort is important too. That's why we offer a home pick-up service. Our team will take care of picking up your furry friend.",
                 section5Heading: "Only €30 per day!",
-                section5Description: "Don't wait any longer. Give your dog the care they deserve and come home to a happy loved, and relaxed companion."
+                section5Description: "Don't wait any longer. Give your dog the care they deserve and come home to a happy loved, and relaxed companion.",
+                aboutUsHeading: "About Us",
+                aboutUsSection1: "At DoggyLand, we care for your dog with the love, respect, and experience they deserve. Since I was little, I’ve always felt a special connection with animals, especially dogs. I remember, as a child, sitting on the ground with dogs much bigger than me, and my mother would let me do what I felt in my heart because she knew there was nothing that could stop me. I’ve petted every dog I’ve met throughout my life, and in each encounter, I found respect and affection, because they sense energy and understand the purity of intention.",
+                aboutUsSection2: "Being able to spend our days caring for dogs is a privilege we truly cherish. We treat every dog that comes here like family, with the same love and care we’d give to our own furry friends. We want you to feel at peace leaving them in our hands, knowing they are in a safe place, filled with love and surrounded by people who not only understand and respect them, but also have the knowledge and training to provide the best possible care.",
             },
             es: {
                 mainTitle: "Bienvenido a Doggyland",
@@ -615,8 +628,12 @@
                 section4Heading: "Cada ladrido es bienvenido",
                 section4Description: "Recuerda que para nosotros tu comodidad también es importante. Ofrecemos servicio de recogida a domicilio. Nuestro equipo se encargará de recoger a tu fiel amigo.",
                 section5Heading: "¡Solo €30 al día",
-                section5Description: "No dudes más. Dale a tu perro el cuidado que se merece y vuelve a casa con un compañero lleno de amor, feliz y muy relajado."
-            }
+                section5Description: "No dudes más. Dale a tu perro el cuidado que se merece y vuelve a casa con un compañero lleno de amor, feliz y muy relajado.",
+                aboutUsHeading: "Sobre Nosotros",
+                aboutUsSection1: "En DoggyLand, nos dedicamos al cuidado de tu perro con el amor, el respeto y la experiencia que merece. Desde que era pequeña, siempre he sentido una conexión especial con los animales, especialmente con los perros. Recuerdo cómo, siendo una niña, me sentaba en el suelo junto a perros enormes y mi madre me dejaba hacer lo que sentía en el corazón porque sabía que no había nada que me detuviera. He acariciado a todos los perros que he conocido a lo largo de mi vida, y en cada encuentro siempre encontré respeto y cariño, porque ellos sienten la energía y entienden la pureza de la intención.", 
+                aboutUsSection2: "Poder dedicar nuestro día a día al cuidado de los perros es, sin duda, un privilegio que valoramos profundamente. Tratamos a cada perro que llega aquí como parte de nuestra familia, con el mismo amor y atención con el que cuidaríamos a nuestros propios amigos peludos. Queremos que te sientas en paz al dejarlos en nuestras manos, sabiendo que están en un lugar seguro, lleno de cariño y rodeados de personas que no solo los entienden y respetan, sino que también cuentan con el conocimiento y preparación necesarios para brindarles el mejor cuidado.", 
+
+              }
       };
       function handleLanguageChange(event) {
             const selectedLanguage = event.target.value;
